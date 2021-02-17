@@ -1,7 +1,16 @@
 import React,{useState, useContext} from 'react';
 import Context from '../../context'
+import SliderItems from './slider/slider-items'
 
 function UniqueBox(){
+    const [shadow, setShadow] = useState({background: 'none'});
+    const [shadow2, setShadow2] = useState({background: 'none'});
+    const [darkLeft, setDarkLeft] = useState({filter: 'brightness(100%)'})
+    const [darkRight, setDarkRight] = useState({filter: 'brightness(100%)'})
+    const [darkLeft2, setDarkLeft2] = useState({filter: 'brightness(100%)'})
+    const [darkRight2, setDarkRight2] = useState({filter: 'brightness(100%)'})
+    const {sliderItems} = useContext(Context);
+    const {allTemplates} = useContext(Context);
     const [grade, setgrade] = useState(180);
     const [style, setStyle] = useState({
         'WebkitTransform': `rotate(0deg)`,
@@ -62,32 +71,67 @@ function UniqueBox(){
                     </div>
                 </div>
             </div>
-            <div className="unique-content-first">
-                {/* <div class="layer">
-                    <h2>Duis te feugifacilisi</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem 
-                    nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. 
-                    Ut wisis enim ad minim veniam, quis nostrud exerci tution ullamcorper suscipit 
-                    lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                </div> */}
-                <div className="unique-content-first-left" >
+            <div className="first-slider-wrapper">
+                <div className="first-slider-wrapper-left">
                     <div className="pagination">
-                        <a className="left_button"> 
-                            <img  style={{width:'100%'}} src="/circle_left.png" alt="left button"/>  
-                        </a>
-                        <hr style={{width:'0px',height:'80px',position:'relative',top:'-10px'}}>
-
-                        </hr>
-                        <a className="right_button" >
-                            <img  style={{width:'100%'}} src="/circle_right.png" alt="right button"/>  
-                        </a>
-                    </div>
-                        <div>
-                            <h2>In the Box</h2>
+                        <div className="circle-left" onClick={()=>{document.getElementsByClassName("slider")[0].scrollLeft-=250}} onMouseOver={()=>{setDarkLeft({filter: 'brightness(50%)'})}} onMouseLeave={()=>{setDarkLeft({filter: 'brightness(100%)'})}}>
+                            <img src="/circle_left.png" alt="btn-left" style={darkLeft}/>
                         </div>
+                        <div className="circle-right" onClick={()=>{document.getElementsByClassName("slider")[0].scrollLeft+=250}} onMouseOver={()=>{setDarkRight({filter: 'brightness(50%)'})}} onMouseLeave={()=>{setDarkRight({filter: 'brightness(100%)'})}}>
+                            <img src="/circle_right.png" alt="btn-left" style={darkRight}/>
+                        </div>
+                    </div>
+                    <div className="text-bottom">
+                        <a>In the Box</a>
+                        <hr align="left"></hr>
+                    </div>
                 </div>
-                <div className="unique-content-first-right">
-
+                <div className="first-slider-wrapper-right">
+                    <div className="shadow" style={shadow}></div>
+                    <div className="slider" onScroll={()=>{if(document.getElementsByClassName("slider")[0].scrollLeft!==0){
+                        setShadow({
+                            boxShadow: `background: rgb(0,0,0)`,
+                        background: `linear-gradient(90deg, rgba(128,128,128,1) 0%, rgba(160,160,160,0.8214636196275386) 39%, rgba(187,187,187,0.47692580450148814) 73%, rgba(235,235,235,0.28084737312893904) 100%, rgba(153,153,153,0.2976540958180147) 100%)`})
+                        }
+                        else{
+                            setShadow({'box-shadow': `none`})
+                        }}}>
+                            <SliderItems sliderItems={sliderItems}/>
+                            <div style = {{paddingRight:'20px', paddingLeft: '20px', display:'block', marginTop: '100px',width:'300px', height:'300px', textAlign:'center', borderLeft: '1px solid rgb(182, 182, 182)'}}>
+                                <a style = {{fontSize:'50px'}}>Want to customize this box?</a>
+                                <hr style={{width:'80px'}}/>
+                                <a className="a-btn">GET STARTED</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div className="second-slider-wrapper">
+                <div className="first-slider-wrapper-left">
+                    <div className="pagination">
+                        <div className="circle-left" onClick={()=>{document.getElementsByClassName("slider")[1].scrollLeft-=250}} onMouseOver={()=>{setDarkLeft2({filter: 'brightness(50%)'})}} onMouseLeave={()=>{setDarkLeft2({filter: 'brightness(100%)'})}}>
+                            <img src="/circle_left.png" alt="btn-left" style={darkLeft2}/>
+                        </div>
+                        <div className="circle-right" onClick={()=>{document.getElementsByClassName("slider")[1].scrollLeft+=250}} onMouseOver={()=>{setDarkRight2({filter: 'brightness(50%)'})}} onMouseLeave={()=>{setDarkRight2({filter: 'brightness(100%)'})}}>
+                            <img src="/circle_right.png" alt="btn-left" style={darkRight2}/>
+                        </div>
+                    </div>
+                    <div className="text-bottom">
+                        <a>In the Box</a>
+                        <hr align="left"></hr>
+                    </div>
+                </div>
+                <div className="first-slider-wrapper-right">
+                    <div className="shadow" style={shadow2}></div>
+                    <div className="slider" onScroll={()=>{if(document.getElementsByClassName("slider")[1].scrollLeft!==0){
+                        setShadow2({
+                            boxShadow: `background: rgb(0,0,0)`,
+                        background: `linear-gradient(90deg, rgba(128,128,128,1) 0%, rgba(160,160,160,0.8214636196275386) 39%, rgba(187,187,187,0.47692580450148814) 73%, rgba(235,235,235,0.28084737312893904) 100%, rgba(153,153,153,0.2976540958180147) 100%)`})
+                        }
+                        else{
+                            setShadow2({'background': `none`})
+                        }}}>
+                            <SliderItems sliderItems={allTemplates}/>
+                    </div>
                 </div>
             </div>
         </div>

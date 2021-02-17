@@ -72,6 +72,13 @@ function App() {
   ['https://manage.teakandtwine.com/storage/images/984/232ebe982701a1e77914f1a877951291.jpg', 'Customize: Cassidy', '$80.00', '/products/unique-box'],
   ['https://manage.teakandtwine.com/storage/images/979/5d56b833dc37206d47b1de5d6acb43fe.jpg', 'Customize: Billy', '$60.00', '/products/unique-box'],
   ['https://manage.teakandtwine.com/storage/images/11679/e2d3ebcd699895e870790614249146be.jpg', 'Customize: Charlie', '$50.00', '/products/unique-box']]
+  const sliderItems = [['https://manage.teakandtwine.com/storage/images/6365/b235b6597dd746e2868faf0b50bb4bb3.jpg', 'Bundle of Cinnamon Sticks'],
+  ['https://manage.teakandtwine.com/storage/images/877/6a2d440ee422ab17794267c205fe7aee.jpg', 'The Loft'],
+  ['https://manage.teakandtwine.com/storage/images/13441/dffa5a4de3f1ec8448d106f43f67a3eb.jpg', 'Shortbread cookies wrapped in floral watercolor by Chelsea Petaja'],
+  ['https://manage.teakandtwine.com/storage/images/1061/033e80cef646795e99f92bb498db836f.jpg', 'Walnut wooden coasters by Make & Stow (Brandable - set of 2)'],
+  ['https://manage.teakandtwine.com/storage/images/6365/b235b6597dd746e2868faf0b50bb4bb3.jpg', 'Bundle of Cinnamon Sticks'],
+  ['https://manage.teakandtwine.com/storage/images/6365/b235b6597dd746e2868faf0b50bb4bb3.jpg', 'Bundle of Cinnamon Sticks'],
+  ['https://manage.teakandtwine.com/storage/images/16814/6d40f586ed0f3977f401efb4a17f9c32.png', 'Cinnamon']]
   const links = {
     Shop: shop,
     Corporate: corporate,
@@ -99,7 +106,7 @@ function App() {
     return () => clearInterval(interval);
   }, []); 
   return (
-    <Context.Provider value={{menu_flag, show_menu, hide_menu, curr_links, changeLinks, curr_ending, wayBoxes, popularBoxes, allBoxes, allTemplates}}>
+    <Context.Provider value={{menu_flag, show_menu, hide_menu, curr_links, changeLinks, curr_ending, wayBoxes, popularBoxes, allBoxes, allTemplates, sliderItems}}>
       <div>
       <Router>
         <Header/>
