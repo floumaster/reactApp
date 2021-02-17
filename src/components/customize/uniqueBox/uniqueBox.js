@@ -62,6 +62,34 @@ function UniqueBox(){
                     </div>
                 </div>
             </div>
+            <div className="unique-content-first">
+                {/* <div class="layer">
+                    <h2>Duis te feugifacilisi</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem 
+                    nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. 
+                    Ut wisis enim ad minim veniam, quis nostrud exerci tution ullamcorper suscipit 
+                    lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                </div> */}
+                <div className="unique-content-first-left" >
+                    <div className="pagination">
+                        <a className="left_button"> 
+                            <img  style={{width:'100%'}} src="/circle_left.png" alt="left button"/>  
+                        </a>
+                        <hr style={{width:'0px',height:'80px',position:'relative',top:'-10px'}}>
+
+                        </hr>
+                        <a className="right_button" >
+                            <img  style={{width:'100%'}} src="/circle_right.png" alt="right button"/>  
+                        </a>
+                    </div>
+                        <div>
+                            <h2>In the Box</h2>
+                        </div>
+                </div>
+                <div className="unique-content-first-right">
+
+                </div>
+            </div>
         </div>
     );
 }

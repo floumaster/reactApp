@@ -136,29 +136,33 @@ code {
 
 .description{
   position: relative;
-  width: 80%;
+  width: 90%;
   height: 600px;
   margin: auto;
   background-size: cover;
-  top: 40px;
+  margin-top: 20px;
+  margin-bottom: 40px;
   z-index: -1;
   align-content: center;
   color: rgb(255, 255, 255);
+  background-image: url('https://manage.teakandtwine.com/storage/images/30047/a0daa0624189d700ad991293006279c0.png');
 }
 
-.description img{
-  position: relative;
-  width: 100%;
-}
-
-.text{
-  position: relative;
+.description h4,.description h2{
+  display: block;
+ padding-top: 20px;
+ padding-left: 40px;
   font-family: 'Bree Serif', serif;
   font-size: 25px;
-  top: -530px;
-  left: 30px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
+.description h2{
+  padding-top: 0px;
+  margin-top:  0px;
+  font-size: 50px;
+}
 .slogans{
   position: relative;
   width: 100%;
@@ -686,4 +690,48 @@ code {
   width: 100%;
 }
 
+.layer{
+    overflow-x: scroll; /* Добавляем полосу прокрутки */
+    width: 300px; /* Ширина блока */
+    height: 150px; /* Высота блока */
+    padding: 5px; /* Поля вокруг текста */
+    border: solid 1px black; /* Параметры рамки */
+    white-space: nowrap; /* Запрещаем перенос строк */
+}
+
+.unique-content-first{
+  height: 600px;
+  margin-top: 100px;
+  width: 100%;
+  border-bottom: 1px solid rgb(224, 224, 224);
+  background-color:#f2eeeb;
+  display: flex;
+}
+
+.unique-content-first-left{
+  width: 30%;
+  display:block;
+  border: 1px solid rgb(8, 8, 8);
+}
+.unique-content-first-left div{
+  margin-left: 40px;
+}
+.unique-content-first-right{
+  width: 70%;
+  display: block;
+  border: 1px solid rgb(8, 8, 8);
+}
+.pagination{
+  margin-top: 40px;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+.pagination a{
+  
+  display: block;
+  width: 80px;
+  height: 80px;
+
+}
 
