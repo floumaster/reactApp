@@ -10,7 +10,7 @@ function SliderItems(props){
                 style['borderLeft'] = '1px solid rgb(182, 182, 182)';
             }
             return(
-                <div style={style}>
+                <div style={style} key={id}>
                     <div style={{backgroundImage:`url(${curr[0]})`, width:'250px', height:'350px', display:'block', margin:'auto', backgroundSize: 'contain',  position:'relative', backgroundRepeat: 'no-repeat'}}>
                     </div>
                     <h1>{id+1}</h1>
