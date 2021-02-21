@@ -4,11 +4,12 @@ import PhoneDropMenu from './phone-dropMenu'
 
 function PhoneHeader(){
     const [class_, setclass] = useState('hamburger hamburger--collapse')
-    const {phone_menu_flag, setPhoneFlag} = useContext(Context);
+    const {phone_menu_flag, setPhoneFlag, content_flag, setContent} = useContext(Context);
     return(
         <div className="phone-wrapper">
             <header className="phone-header">
-            <div className={class_} onClick={()=>{setclass(class_==='hamburger hamburger--collapse'?'hamburger hamburger--collapse is-active':'hamburger hamburger--collapse'); setPhoneFlag(!phone_menu_flag)}}>
+            <div className={class_} onClick={()=>{setContent(!content_flag);
+                setclass(class_==='hamburger hamburger--collapse'?'hamburger hamburger--collapse is-active':'hamburger hamburger--collapse'); setPhoneFlag(!phone_menu_flag)}}>
                 <div className="hamburger-box">
                     <div className="hamburger-inner"></div>
                 </div>

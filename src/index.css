@@ -19,7 +19,7 @@ a{
 .header{
   position:relative;
   width: 100%;
-  height: 80px;
+  height: 10vh;
   border-bottom: 1px solid #c3bbb9;
   font-size: 1.5vw;
   display: block;
@@ -66,8 +66,6 @@ a{
 
 .hamburger{
   display: block;
-  width: 20%;
-  height: 100%;
   position: relative;
 }
 
@@ -193,19 +191,17 @@ a{
   position: relative;
   width: 100%;
   display: flex;
+  padding-top: 2vh;
   justify-content: center;
 }
 
 .description{
   position: relative;
-  width: 90%;
-  height: 600px;
+  width: 90vw;
+  height: 90vh;
   display: block;
-  margin: auto;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-top: 20px;
-  margin-bottom: 40px;
   z-index: -1;
   align-content: center;
   color: rgb(255, 255, 255);
@@ -213,29 +209,21 @@ a{
 }
 
 .description h4,.description h2{
- padding-left: 2%;
+ padding-left: 2vw;
   font-family: 'Bree Serif', serif;
   margin-bottom: 0px;
+  margin-top: 7vh;
   padding-bottom: 0px;
-  font-size: 2vh;
+  font-size: 5vh;
 }
 
 .description h2{
   padding-top: 0px;
   margin-top:  0px;
-  font-size: 4vh;
+  font-size: 6vh;
 }
 
 
-
-@media screen and (max-width: 700px) {
-  .wrapper{
-    display: none;
-  }
-  .phone-wrapper{
-    display: block;
-  }
-}
 
 .search{
   color: #908e8e;
@@ -331,31 +319,32 @@ a{
 
 .slogans{
   position: relative;
-  width: 100%;
-  height: 350px;
+  width: 100vw;
+  height: 50vh;
   background-color: rgb(245, 245, 245);
   margin: auto;
+  margin-top: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .content{
-  width: 80%;
+  width: 80vw;
   height: 70%;
   border: 1px solid #c3bbb9;
   background-size: 50%;
   background-position-x: 50%;
   background-position-y: 50%;
   background-repeat:no-repeat;
+  padding-top: 7vh;
   z-index: 1;
-  font-size: 45px;
+  font-size: 5vh;
   text-align: center;
 }
 
 .content a{
   position: relative;
-  top: 40px;
   font-family: 'Brygada 1918', serif;
 }
 
@@ -364,15 +353,15 @@ a{
   display: block;
   margin: auto;
   position: relative;
-  margin-top: 60px;
-  padding-top: 10px;
-  font-size: 17px;
-  border: 1px solid #c3bbb9;
-  border-radius: 35px;
+  line-height: 6vh;
+  font-size: 2vh;
+  margin-top: 5vh;
+  border: 0.2vw solid #c3bbb9;
+  border-radius: 4vw;
   background-color: rgb(136, 136, 136);
   color: rgb(255, 255, 255);
-  width: 270px;
-  height: 34px;
+  width: 20vw;
+  height: 6vh;
 }
 
 .a-btn:hover{
@@ -1649,5 +1638,202 @@ a{
   .hamburger--vortex-r.is-active .hamburger-inner::after {
     bottom: 0;
     transform: rotate(-90deg); }
+
+
+
+    /*******************************************************/
+    
+    
+    @media screen and (max-width: 615px) {
+      .wrapper{
+        display: none;
+      }
+      .phone-wrapper{
+        display: block;
+      }
+      .description h4{
+        font-size: 5vh;
+        margin-top: 7vh;
+      }
+      .description h2{
+        font-size: 6vh;
+      }
+      .header{
+        height: 10vh;
+      }
+      .description-wrapper{
+        height: 50vh;
+      }
+      .slogans{
+        height: 50vh;
+      }
+      .content{
+        padding-top: 7vh;
+        height: 30vh;
+        font-size: 5vh;
+      }
+      .a-btn{
+        line-height: 5vh;
+        margin-top: 5vh;
+        font-size: 1.5vw;
+        width: 20vw;
+        height: 5vh;
+      }
+    }
+    
+    @media screen and (min-width: 500px) and (max-width: 615px) {
+      .description h4{
+        font-size: 4vh;
+        margin-top: 4vh;
+      }
+      .description h2{
+        font-size: 5vh;
+      }
+      .header{
+        height: 8vh;
+      }
+      .description-wrapper{
+        height: 40vh;
+      }
+      .slogans{
+        height: 40vh;
+      }
+      .content{
+        padding-top: 5vh;
+        height: 25vh;
+        font-size: 3vh;
+      }
+      .a-btn{
+        line-height: 4vh;
+        font-size: 1.3vh;
+        height: 4vh;
+        margin-top: 4vh;
+      }
+    }
+    
+    @media screen and (min-width: 300px) and (max-width: 499px) {
+    
+      .description h4{
+        font-size: 2vh;
+        margin-top: 2vh;
+      }
+      .description h2{
+        font-size: 3vh;
+      }
+      .header{
+        height: 6vh;
+      }
+      .description-wrapper{
+        height: 30vh;
+      }
+      .slogans{
+        height: 30vh;
+      }
+      .content{
+        padding-top: 5vh;
+        height: 15vh;
+        font-size: 2.5vh;
+      }
+      .a-btn{
+        line-height: 3vh;
+        font-size: 1vh;
+        height: 3vh;
+        margin-top: 3vh;
+      }
+    }
+    
+    @media screen and (min-width: 200px) and (max-width: 299px) {
+    
+      .description h4{
+        font-size: 1.2vh;
+        margin-top: 1.2vh;
+      }
+      .description h2{
+        font-size: 1.8vh;
+      }
+      .header{
+        height: 4vh;
+      }
+      .description-wrapper{
+        height: 20vh;
+      }
+      .slogans{
+        height: 20vh;
+      }
+      .content{
+        padding-top: 3vh;
+        height: 10vh;
+        font-size: 1.5vh;
+      }
+      .a-btn{
+        line-height: 2vh;
+        font-size: 0.8vh;
+        height: 2vh;
+        margin-top: 2vh;
+      }
+    }
+    
+    @media screen and (min-width: 61px) and (max-width: 199px) {
+    
+      .description h4{
+        font-size: 0.4vh;
+        margin-top: 1vh;
+      }
+      .description h2{
+        font-size: 0.7vh;
+      }
+      .header{
+        height: 3vh;
+      }
+      .description-wrapper{
+        height: 10vh;
+      }
+      .slogans{
+        height: 10vh;
+      }
+      .content{
+        padding-top: 1vh;
+        height: 5vh;
+        font-size: 1vh;
+      }
+      .a-btn{
+        line-height: 1vh;
+        font-size: 0.5vh;
+        height: 1vh;
+        margin-top: 0.5vh;
+      }
+    }
+    
+    @media screen and (min-width: 0px) and (max-width: 60px) {
+    
+      .description h4{
+        font-size: 0.2vh;
+        margin-top: 1vh;
+      }
+      .description h2{
+        font-size: 0.5vh;
+      }
+      .header{
+        height: 2vh;
+      }
+      .description-wrapper{
+        height: 5vh;
+      }
+      .slogans{
+        height: 5vh;
+      }
+      .content{
+        font-size: 0.2vh;
+        padding-top: 0.5vh;
+        height: 2vh;
+      }
+      .a-btn{
+        line-height: 0.5vh;
+        font-size: 0.1vh;
+        height: 0.5vh;
+        margin-top: 0.5vh;
+      }
+    }
+    
 
 

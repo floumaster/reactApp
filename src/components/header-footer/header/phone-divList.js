@@ -18,25 +18,25 @@ function PhoneDivList(){
             <h2 className="headers">Shop</h2>
             {shop.map((current, index, array)=>{
                 return(
-                    <a className="phone-links">{current[0]}<br/></a>
+                    <a className="phone-links" key={index}>{current[0]}<br/></a>
                 )
             })}
             <h2 className="headers">Corporate</h2>
             {corporate.map((current, index, array)=>{
                 return(
-                    <a className="phone-links">{current[0]}<br/></a>
+                    <a className="phone-links" key={index}>{current[0]}<br/></a>
                 )
             })}
             <h2 className="headers">Custom</h2>
             {custom.map((current, index, array)=>{
                 return(
-                    <a className="phone-links">{current[0]}<br/></a>
+                    <a className="phone-links" key={index}>{current[0]}<br/></a>
                 )
             })}
             <h2 className="headers">About</h2>
             {about.map((current, index, array)=>{
                 return(
-                    <a className="phone-links">{current[0]}<br/></a>
+                    <a className="phone-links" key={index}>{current[0]}<br/></a>
                 )
             })}
         </div>

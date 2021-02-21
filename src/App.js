@@ -17,6 +17,7 @@ function App() {
   const [curr_links, setLinks] = useState([]);
   const [curr_ending, setEnding] = useState('love'); 
   const [btn_class, setbtnclass] = useState('search-btn');
+  const [content_flag, setContent] = useState(true);
   const shop = [
     ['Shop', [['Shop All Gifts', '/shop'], ['Most Popular','/popular'], ['Gifts under $100','/low-cost'], ['Limited Editions','']]],
     ['Design your own gift', [['Choose Your Layout!','/customize']]],
@@ -114,7 +115,7 @@ function App() {
     return () => clearInterval(interval);
   }, []); 
   return (
-    <Context.Provider value={{btn_class, setSearch, shop, corporate, custom, about, phone_menu_flag, setPhoneFlag, menu_flag, show_menu, hide_menu, curr_links, changeLinks, curr_ending, wayBoxes, popularBoxes, allBoxes, allTemplates, sliderItems}}>
+    <Context.Provider value={{content_flag, setContent, btn_class, setSearch, shop, corporate, custom, about, phone_menu_flag, setPhoneFlag, menu_flag, show_menu, hide_menu, curr_links, changeLinks, curr_ending, wayBoxes, popularBoxes, allBoxes, allTemplates, sliderItems}}>
       <div>
       <Router>
         <Header/>
